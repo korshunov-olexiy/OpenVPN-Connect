@@ -1,7 +1,7 @@
 import enquiries, subprocess, shutil, sys
 from re import sub
 from subprocess import CalledProcessError, check_output, run
-from os import listdir, path, sep, remove
+from os import listdir, path, sep, remove, mkdir
 from os.path import exists
 from zipfile import ZipFile
 from urllib.request import urlopen, urlretrieve
@@ -18,6 +18,9 @@ pass_file = 'pwd.png'
 vpn_zip = 'vpn.zip'
 login_file = 'login.conf'
 openvpn_dir = path.join(path.expanduser('~'), '.OpenVPN')
+# create directory openvpn_dir if not exists
+if not exists(openvpn_dir):
+    mkdir(openvpn_dir)
 # remove ovpn-files in openvpn_dir
 for file_item in list_ovpn_files(openvpn_dir, 'ovpn'):
     try:

@@ -19,6 +19,6 @@ VPN connection to the selected profile from the existing ones on the vpnbook.com
    3. `lxml` - processing XML and HTML
 
 To install the required modules, you can run the command:<br>
-`pip3 -r install requirements.txt`<br>
+`pip3 install -r requirements.txt`<br>
 or install them separately:<br>
 `pip3 install <module_name>`
